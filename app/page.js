@@ -69,49 +69,74 @@ const socialLinks = [
   },
 ];
 
+const whatsappMessage = encodeURIComponent(
+  "Hello MrB Gadgets. I want to ........."
+);
+
+const whatsappLink = `https://wa.me/2348082183770?text=${whatsappMessage}`;
+
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-black">
       {/* Phone container */}
-      <div className="relative w-full max-w-[500px] overflow-hidden bg-white shadow-2xl">
-        {/* Top header */}
-        <header 
-          style={{
-            backgroundImage: "url('/bassy-cac.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            // backgroundAttachment: "fixed",
-          }}
-        
-          className="relative h-[265px] overflow-hidden bg-black">
-          {/* Orange divider */}
+      <div className="relative w-full max-w-[500px] bg-white shadow-2xl">
 
-          
-          {/* <Image
-            src="/bassy-cac.jpg"
-            alt="Edson Marques"
-            fill
-            className="object-cover"
-            priority
-          /> */}
-          {/* <div className="absolute bottom-0 h-5 w-full border-t-4 border-black" /> */}
+        {/* Top header */}
+        <header className="relative h-[230px] bg-black">
+
+          {/* Background image */}
+          <div
+            className="
+              absolute inset-0
+              overflow-hidden
+              bg-black
+            "
+          >
+            <div
+              className="absolute inset-0 bg-cover bg-top"
+              style={{
+                backgroundImage: "url('/bassy-cac.jpg')",
+              }}
+            />
+          </div>
+
         </header>
 
-        {/* Main profile section */}
-        <section
-          className="relative overflow-hidden px-5 pb-8"
-          style={{
-            backgroundImage: "url('/gadgets-background.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            // backgroundAttachment: "fixed",
-          }}
+        {/* Profile + content section */}
+        <section className="relative overflow-visible bg-white px-5 pb-8"
+        style={{
+          backgroundImage: "url('/gadgets-background.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
         >
-          {/* Background overlay */}
-          <div className="absolute inset-0 bg-white/85" />
+          <div className="absolute inset-0 bg-white/80" />
 
-          {/* Section content */}
-          <div className="relative z-10">
+          {/* Profile */}
+          <div
+            className="
+              absolute left-1/2 top-0
+              z-[100]
+              h-[120px] w-[120px]
+              -translate-x-1/2 -translate-y-1/2
+              overflow-hidden rounded-full
+              border-4 border-white
+              bg-gray-100
+              shadow-xl
+            "
+          >
+            <Image
+              src="/Bassy-logo-black.png"
+              alt="MrB Gadgets"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 pt-14">
+
             {/* Name and profession */}
             <div className="mt-3 bg-white text-center">
               <h1 className="text-[22px] font-bold text-gray-700">
@@ -148,7 +173,7 @@ export default function Home() {
             <div className="mt-8 space-y-3">
               <div className="">
                 <a
-                  href="https://wa.me/2348082183770"
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat on WhatsApp"
@@ -164,18 +189,8 @@ export default function Home() {
                     hover:shadow-md
                   "
                 >
-                  {/* Logo + Name */}
                   <div className="flex items-center gap-3">
-                    <span
-                      className="
-                        flex h-11 w-11 shrink-0
-                        items-center justify-center
-                        rounded-xl
-                        bg-[#25D366]
-                        transition-transform duration-300
-                        group-hover:scale-105
-                      "
-                    >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#25D366] transition-transform duration-300 group-hover:scale-105">
                       <FaWhatsapp size={22} color="white" />
                     </span>
 
@@ -184,17 +199,7 @@ export default function Home() {
                     </span>
                   </div>
 
-                  {/* Chat button */}
-                  <span
-                    className="
-                      bg-[#25D366]
-                      px-4 py-2
-                      text-[11px] font-bold text-white
-                      transition-all duration-300
-                      group-hover:bg-[#20bd5a]
-                      group-active:scale-95
-                    "
-                  >
+                  <span className="bg-[#25D366] px-4 py-2 text-[11px] font-bold text-white transition-all duration-300 group-hover:bg-[#20bd5a] group-active:scale-95">
                     Chat
                   </span>
                 </a>
@@ -275,3 +280,6 @@ export default function Home() {
     </main>
   );
 }
+
+
+   
