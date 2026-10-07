@@ -40,13 +40,6 @@ const services = [
 
 const socialLinks = [
   {
-    label: "SnapChat",
-    icon: FaSnapchatGhost,
-    href: "https://www.snapchat.com/add/bassyvibesz?share_id=rzw8ma2KS9qfc1lbuvSA8Q&locale=en_NG",
-    bg: "#FFFC00",
-    iconColor: "#000000",
-  },
-  {
     label: "JiJi",
     icon: Hand,
     href: "https://jiji.ng/shop/mrbgadgets",
@@ -67,6 +60,13 @@ const socialLinks = [
     bg: "#000000",
     iconColor: "#ffffff",
   },
+  {
+    label: "SnapChat",
+    icon: FaSnapchatGhost,
+    href: "https://www.snapchat.com/add/bassyvibesz?share_id=rzw8ma2KS9qfc1lbuvSA8Q&locale=en_NG",
+    bg: "#FFFC00",
+    iconColor: "#000000",
+  },
 ];
 
 export default function Home() {
@@ -75,16 +75,26 @@ export default function Home() {
       {/* Phone container */}
       <div className="relative w-full max-w-[500px] overflow-hidden bg-white shadow-2xl">
         {/* Top header */}
-        <header className="relative h-[185px] overflow-hidden bg-black">
+        <header 
+          style={{
+            backgroundImage: "url('/bassy-cac.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "top",
+            // backgroundAttachment: "fixed",
+          }}
+        
+          className="relative h-[265px] overflow-hidden bg-black">
           {/* Orange divider */}
-          <Image
-            src="/dashboard.jpg"
+
+          
+          {/* <Image
+            src="/bassy-cac.jpg"
             alt="Edson Marques"
             fill
             className="object-cover"
             priority
-          />
-          <div className="absolute bottom-0 h-5 w-full border-t-4 border-black" />
+          /> */}
+          {/* <div className="absolute bottom-0 h-5 w-full border-t-4 border-black" /> */}
         </header>
 
         {/* Main profile section */}
@@ -109,7 +119,7 @@ export default function Home() {
               </h1>
 
               <p className="text-sm leading-5 font-bold text-gray-600">
-                Address: Goodness Plaza, 9 Pepple Street, Computer Village,
+                Address: Goodness Plaza, 10 Pepple Street, Computer Village,
                 Ikeja, Lagos. Opposite Keystone Bank
               </p>
             </div>
@@ -131,9 +141,64 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            
+            {/* WhatsApp */}
 
             {/* Social media links */}
             <div className="mt-8 space-y-3">
+              <div className="">
+                <a
+                  href="https://wa.me/2348082183770"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp"
+                  className="
+                    group flex h-[68px] w-full items-center
+                    justify-between
+                    border border-gray-100 bg-white/95
+                    px-4 shadow-sm backdrop-blur-sm
+                    transition-all duration-300
+                    hover:-translate-y-0.5
+                    hover:border-gray-200
+                    hover:bg-white
+                    hover:shadow-md
+                  "
+                >
+                  {/* Logo + Name */}
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="
+                        flex h-11 w-11 shrink-0
+                        items-center justify-center
+                        rounded-xl
+                        bg-[#25D366]
+                        transition-transform duration-300
+                        group-hover:scale-105
+                      "
+                    >
+                      <FaWhatsapp size={22} color="white" />
+                    </span>
+
+                    <span className="text-sm font-semibold text-gray-800">
+                      WhatsApp
+                    </span>
+                  </div>
+
+                  {/* Chat button */}
+                  <span
+                    className="
+                      bg-[#25D366]
+                      px-4 py-2
+                      text-[11px] font-bold text-white
+                      transition-all duration-300
+                      group-hover:bg-[#20bd5a]
+                      group-active:scale-95
+                    "
+                  >
+                    Chat
+                  </span>
+                </a>
+              </div>
               {socialLinks.map(({ label, icon: Icon, href, bg, iconColor }) => (
                 <a
                   key={label}
@@ -196,60 +261,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* WhatsApp */}
-            <div className="mt-3">
-              <a
-                href="https://wa.me/08082183770"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Chat on WhatsApp"
-                className="
-                  group flex h-[68px] w-full items-center
-                  justify-between
-                  border border-gray-100 bg-white/95
-                  px-4 shadow-sm backdrop-blur-sm
-                  transition-all duration-300
-                  hover:-translate-y-0.5
-                  hover:border-gray-200
-                  hover:bg-white
-                  hover:shadow-md
-                "
-              >
-                {/* Logo + Name */}
-                <div className="flex items-center gap-3">
-                  <span
-                    className="
-                      flex h-11 w-11 shrink-0
-                      items-center justify-center
-                      rounded-xl
-                      bg-[#25D366]
-                      transition-transform duration-300
-                      group-hover:scale-105
-                    "
-                  >
-                    <FaWhatsapp size={22} color="white" />
-                  </span>
-
-                  <span className="text-sm font-semibold text-gray-800">
-                    WhatsApp
-                  </span>
-                </div>
-
-                {/* Chat button */}
-                <span
-                  className="
-                    bg-[#25D366]
-                    px-4 py-2
-                    text-[11px] font-bold text-white
-                    transition-all duration-300
-                    group-hover:bg-[#20bd5a]
-                    group-active:scale-95
-                  "
-                >
-                  Chat
-                </span>
-              </a>
-            </div>
           </div>
         </section>
 
