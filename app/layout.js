@@ -9,7 +9,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: "MRB Gadgets",
+  title: "MrB Gadgets",
   description: "Phones, laptops, accessories and games.",
 };
 
