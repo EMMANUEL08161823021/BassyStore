@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fredoka:wght@300..700&family=Manrope:wght@200..800&family=Monomakh&family=Playwrite+NO:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+
+
 @import "tailwindcss";
 
 
@@ -6,41 +9,21 @@ html {
   scroll-margin-top: -70px;
 }
 
-/* ::-webkit-scrollbar-thumb { background: #0B2A4A; border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: #0B2A4A; }
 
-.dark ::-webkit-scrollbar-track { background: #0f1117; }
-.dark ::-webkit-scrollbar-thumb { background: #374151; border-radius: 99px; }
-.dark ::-webkit-scrollbar-thumb:hover { background: #0B2A4A; }
-
-* { scrollbar-width: thin; scrollbar-color: #c4beed transparent; }
-.dark * { scrollbar-color: #374151 #0f1117; } */
+* { scrollbar-width: thin; scrollbar-color: #000000 transparent; }
+.dark * { scrollbar-color: #374151 #0f1117; }
 
 /* @font-face {
-  font-family: 'CreatoDisplay';
-  src: url('./fonts/CreatoDisplay-Regular.otf');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CreatoDisplay';
-  src: url('./fonts/CreatoDisplay-Black.otf');
+  font-family: 'Quicksand';
+  src: url('../public/font/Quicksand-VariableFont_wght.ttf');
   font-weight: 500;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'CreatoDisplay';
-  src: url('./fonts/CreatoDisplay-Bold.otf');
-  font-weight: 600;
-  font-display: swap;
-}
-
-body {
-  font-family: 'CreatoDisplay', sans-serif;
 } */
 
+
+body {
+  font-family: var(--font-quicksand), sans-serif;
+}
 
 
 :root {
